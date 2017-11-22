@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+    <!-- 删除 -->
+    <Button
+        android:id="@+id/delete_bt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/shape"
+        android:text="清空"
+        android:layout_marginTop="20dp"
+        />
+
+    <!-- 更新 -->
+    <Button
+        android:id="@+id/update_bt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/shape"
+        android:text="@string/string_update_update"
+        android:layout_marginTop="20dp"
+        />
+
+    <!-- 库别资料 -->
+    <TextView
+        android:id="@+id/update_kube_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/colorRed"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/update_code_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/colorRed"
+        android:layout_marginTop="10dp"
+        />
+   
+</LinearLayout>

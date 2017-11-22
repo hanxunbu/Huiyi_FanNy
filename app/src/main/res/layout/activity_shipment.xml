@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical"
+        >
+    <!-- 出货单号 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_shipment_delivery_order"
+            />
+        <EditText
+            android:id="@+id/shipment_shipment_odd_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:textSize="16dp"
+            />
+        <!-- android:focusable="false"  取消焦点-->
+        <Button
+            android:id="@+id/shipment_seek_bt"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:text="@string/string_shipment_seek"
+            />
+
+    </LinearLayout>
+
+        <!-- 产品编号 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/chanpin_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_shipment_product_number"
+                />
+            <EditText
+                android:id="@+id/shipment_product_number_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+
+        <!-- 产品名称 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_shipment_product_name"
+                />
+            <EditText
+                android:id="@+id/shipment_product_name_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:focusable="false"
+                />
+            <Button
+                android:id="@+id/shipment_qiehaun_btn"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:text="切换"
+                />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="显示/隐藏 产品内容"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="90dp"
+                />
+            <!-- 隐藏内容的按钮 -->
+            <ImageView
+                android:id="@+id/img_click"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="140dp"
+                android:src="@drawable/text_ic_expand"/>
+        </RelativeLayout>
+
+
+        <!-- 隐藏内容的范围 -->
+        <LinearLayout
+            android:id="@+id/ll_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="-1dp"
+            android:background="#cccccc">
+
+
+        <!-- 客户编号 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_shipment_customer_number"
+                />
+            <EditText
+                android:id="@+id/shipment_customer_number_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+
+    <!-- 客户名称 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_shipment_customer_name"
+            />
+        <EditText
+            android:id="@+id/shipment_customer_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+
+    <!-- 收货地址 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_shipment_shipping_address"
+            />
+        <EditText
+            android:id="@+id/shipment_shipping_address_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+        </LinearLayout>
+
+    <!-- 交货数量 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_shipment_shipping_number"
+            />
+        <EditText
+            android:id="@+id/shipment_shipping_number_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+    <!-- 出货库别 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_shipment_shipping_kuname"
+            />
+        <Spinner
+            android:id="@+id/shipment_shipment_kuname_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"/>
+    </LinearLayout>
+
+    <!-- 出货时间 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_shipment_shipping_time"
+            />
+        <EditText
+            android:id="@+id/shipment_shipping_time_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+    <!-- 复选框 -->
+    <RadioGroup
+        android:id="@+id/shipment_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <!-- 离线出货 -->
+        <RadioButton
+            android:id="@+id/shipment_offline_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/string_shipment_offline_shipment" />
+        <!-- 本地删除 -->
+        <RadioButton
+            android:id="@+id/shipment_deletion_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_local_deletion" />
+    </RadioGroup>
+
+    <!-- 条码 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_refund_bar_code"
+            />
+        <EditText
+            android:id="@+id/shipment_shipping_code_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </LinearLayout>
+
+        <!-- 扫描数量 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫描货品数量 :"
+                />
+
+            <TextView
+                android:id="@+id/shipment_fahuo_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/colorRed"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+        <!-- 已出货数量 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已出货品数量 :"
+                />
+
+            <TextView
+                android:id="@+id/shipment_yifahuo_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/colorRed"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+    <!-- 按键 -->
+        <Button
+            android:id="@+id/shipment_uploading_bt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/string_shipment_uploading"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            />
+    </LinearLayout>
+</ScrollView>
